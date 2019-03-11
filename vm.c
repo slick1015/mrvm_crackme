@@ -186,7 +186,7 @@ VM* vm_init(VM* vm, uint8_t bytecode[], uint32_t bytecode_size)
     vm->bytecode_size = bytecode_size;
 
     vm->registers.ip = vm->memory;
-    vm->registers.sp = (uint64_t*)vm->memory + VM_MEMORY_SIZE;
+    vm->registers.sp = (uint64_t) vm->memory + VM_MEMORY_SIZE;
 
     for(uint32_t i = 0; i < 256; i++)
     {
